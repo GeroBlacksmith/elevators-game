@@ -6,7 +6,8 @@ public class ElevatorStoppedState : ElevatorBaseState
    
     public override void EnterState(ElevatorController elevator)
     {
-        elevator.DelayedTransition(elevator.MovingUpState);
+        elevator.DelayedTransition(elevator.StateController());
+        //elevator.DelayedTransition(elevator.MovingUpState);
         Debug.Log("Stopped");
     }
 
